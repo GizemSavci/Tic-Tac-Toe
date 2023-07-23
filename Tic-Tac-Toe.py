@@ -1,4 +1,9 @@
 print("Welcome to Tic Tac Toe Game!")
+print(" /\\_/\\ ")
+print("( o.o )")
+print(" > ^ < ")
+print("")
+print("")
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 currentPlayer = "X"
 winner = None
