@@ -70,18 +70,18 @@ def checkTie(board):
         gameRunning = False
 
 def checkWin():
+    global gameRunning
     if checkhorizontal(board) or checkVertical(board) or checkDiagonal(board):
         print(f"The winner is {winner}")
+        gameRunning = False
 
 #switch player
 def switchPlayer():
-    global currentPlayer
+    global currentPlayer, gameRunning
     if currentPlayer == "X":
         currentPlayer = "O"
     else:
         currentPlayer = "X"
-        gameRunning = False
-
 
 while gameRunning:
     printBoard(board)
