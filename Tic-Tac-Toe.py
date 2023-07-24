@@ -54,26 +54,13 @@ def checkVertical(board):
 
     
 def checkDiagonal(board):
+    global winner
     if board[0] == board[4] == board[8] and board[0] != " ":
         winner = board[0]
         return True
     elif board[2] == board[4] == board[6] and board[2] != " ":
         winner = board[2]
         return True
-
-#tie check
-def checkTie(board):
-    global gameRunning
-    if " " not in board:
-        print("It is a tie.")
-        printBoard(board)
-        gameRunning = False
-
-def checkWin():
-    global gameRunning
-    if checkhorizontal(board) or checkVertical(board) or checkDiagonal(board):
-        print(f"The winner is {winner}")
-        gameRunning = False
 
 #switch player
 def switchPlayer():
@@ -82,6 +69,21 @@ def switchPlayer():
         currentPlayer = "O"
     else:
         currentPlayer = "X"
+
+def checkWin():
+    global gameRunning
+    if checkhorizontal(board) or checkVertical(board) or checkDiagonal(board):
+        printBoard(board)
+        print(f"The winner is {winner}")
+        gameRunning = False
+
+#tie check
+def checkTie(board):
+    global gameRunning
+    if " " not in board:
+        printBoard(board)
+        print("It is a tie.")
+        gameRunning = False
 
 while gameRunning:
     printBoard(board)
