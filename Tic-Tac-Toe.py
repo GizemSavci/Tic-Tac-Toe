@@ -1,4 +1,4 @@
-print("Welcome to Tic Tac Toe Game!")
+print("Welcome to Gizem'sTic Tac Toe Game!")
 print(" /\\_/\\ ")
 print("( o.o )")
 print(" > ^ < ")
